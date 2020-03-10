@@ -1,28 +1,26 @@
 <template lang="pug">
- v-app#inspire
-      navigation-component(:drawer='drawer' app)
-      v-app-bar(app, color='indigo', dark)
-        v-app-bar-nav-icon(@click.stop='drawer = !drawer')
-        v-toolbar-title Application
-      v-content
-        v-container(fluid)
-        v-row()
-          v-col.green(cols="8")
-            | Main Body
-          v-col.yellow(cols="4")
-            | Trends
+v-app#inspire
+  navigation-component(:drawer="drawer")
+  v-content
+    v-container(fluid)
+      v-row()
+        .col-md-8.col-xs-12()
+          body-component(@oclickeme="drawer = !drawer")
+        .col-md-4.d-none.d-sm-none.d-md-flex.yellow()
+          trends-component()
 
-        //- v-container.fill-height(fluid)
-        //-   | Hello world
-      
 
 </template>
 
 <script>
-import NavigationComponent from "@/components/navigation/NavigationComponet.vue"
+import NavigationComponent from "@/components/navigation/NavigationComponent";
+import BodyComponent from "@/components/body/BodyComponent.vue";
+import TrendsComponent from "@/components/trends/TrendsComponent.vue";
 export default {
-  components:{
-    NavigationComponent
+  components: {
+    NavigationComponent,
+    BodyComponent,
+    TrendsComponent
   },
   props: {
     source: String

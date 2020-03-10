@@ -1,4 +1,4 @@
-# twitter-clone
+# tweeter
 
 ## Project setup
 ```
