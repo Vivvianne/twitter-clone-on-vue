@@ -37,7 +37,7 @@ export default {
       {
         outIcon: "twitter_logo",
         inIcon: "twitter_logo",
-        title: "",
+        title: "Homdse",
         link: "/"
       },
       {
